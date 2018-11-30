@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache">
+<title>黑眼圈订单系统 功能最强大的订单系统 样式mob01</title>
+<meta name="Copyright" Content="zzfhw.taobao.com,yun.not3.com,All Rights Reserved"> 
+<script type="text/javascript" src="js/diqu.js"></script>
+<script type="text/javascript" src="js/notorder.js"></script>
+<link href="css/style.css" type="text/css" rel="stylesheet"/>
+<style type="text/css">
+    #order{width:100%;background:#FFFFFF;}
+    .title,.subbox input{background:#EE0000;}
+</style>
+
+<script>
+document.title="cansibei 订购中心";
+
+</script>
+</head>
+<body>
+<div id="order">
+    <div class="warp">
+        <form id="form" name="form" action="http://www.sensor.gd.cn/notorder.asp?cname=298" method="post" onsubmit="return postcheck()" target="_blank">
+        <input type="hidden" name="orderid" id="orderid" value="">
+        <div class="title">商品信息</div>
+        <div style="padding-left:10px;max-width:640px;margin:0px auto;padding-bottom:10px;">
+蚕丝被尺码默认是2*2.3 
+        </div>  
+        <div class="bdbox">
+            <label class="bdxx"><em>*</em>选择产品</label>
+            <div class="dxbox red">
+            <input type="hidden" id="xzlx" value="1">
+            
+                <input type="radio" name="product" id="a1" value="恒源祥蚕丝被 5斤被1床298元" alt="298" onclick="pricea()"  ><label for="a1">恒源祥蚕丝被 5斤被1床&nbsp;&nbsp;298元</label><br>
+              
+                <input type="radio" name="product" id="a2" value="恒源祥蚕丝被 8斤被1床368元" alt="368" onclick="pricea()" checked ><label for="a2">恒源祥蚕丝被 8斤被1床&nbsp;&nbsp;368元</label><br>
+              
+                <input type="radio" name="product" id="a3" value="恒源祥蚕丝被 8斤子母被1床【3斤子被 5斤母被】398元" alt="398" onclick="pricea()"  ><label for="a3">恒源祥蚕丝被 8斤子母被1床【3斤子被 5斤母被】&nbsp;&nbsp;398元</label><br>
+              
+                <input type="radio" name="product" id="a4" value="恒源祥蚕丝被 5斤被2床498元" alt="498" onclick="pricea()"  ><label for="a4">恒源祥蚕丝被 5斤被2床&nbsp;&nbsp;498元</label><br>
+              
+                <input type="radio" name="product" id="a5" value="恒源祥蚕丝被 10斤子母被1床【4斤子被 6斤母被】498元" alt="498" onclick="pricea()"  ><label for="a5">恒源祥蚕丝被 10斤子母被1床【4斤子被 6斤母被】&nbsp;&nbsp;498元</label><br>
+              
+                <input type="radio" name="product" id="a6" value="恒源祥蚕丝被 8斤被2床598元" alt="598" onclick="pricea()"  ><label for="a6">恒源祥蚕丝被 8斤被2床&nbsp;&nbsp;598元</label><br>
+                 
+            </div>
+        </div>
+<!--附加属性b-->
+
+
+                <div class="bdbox">
+                    <label class="bdxx"><em>*</em>颜色</label>
+                    <div class="dxbox red">
+                    
+                    <label><input type="radio" name="chanpin1" value="白色暗花" checked >&nbsp;&nbsp;白色暗花</label><br>
+
+                    <label><input type="radio" name="chanpin1" value="红色暗花"  >&nbsp;&nbsp;红色暗花</label><br>
+
+                    <label><input type="radio" name="chanpin1" value="两床颜色不同请备注"  >&nbsp;&nbsp;两床颜色不同请备注</label><br>
+
+                    </div>
+                </div>
+ 
+<!--附加属性e-->
+        <div class="bdbox" style="display:none" >
+            <label class="bdxx"><em>*</em>数量</label>
+            <div class="text3box">
+                <input type="text" name="mun" value="1" onchange="pricea()" > 
+
+            </div>
+        </div>
+        <div class="bdbox">
+            <label class="bdxx"><em>*</em>您的姓名</label>
+            <div class="textbox">
+                <input type="text" name="name">
+            </div>
+        </div>
+        <div class="bdbox">
+            <label class="bdxx"><em>*</em>手机号码</label>
+            <div class="textbox">
+                <input type="text" name="mob">
+            </div>
+        </div>
+
+        <div class="bdbox">
+            <label class="bdxx"><em>*</em>所在地区</label>
+            <div class="xlbox">
+                <select name="province" class="dqxl"></select><select name="city" class="dqxl"><option value="">选城市</option></select><select name="area" class="dqxl"><option value="">选地区</option></select>
+            </div>
+        </div>
+
+        <div class="bdbox">
+            <label class="bdxx"><em>*</em>详细地址</label>
+            <div class="textbox">
+                <input type="text" name="address">
+            </div>
+        </div>
+        <div class="bdbox"  >
+            <label class="bdxx"><em>*</em>支付金额</label>
+            <div class="text3box">
+                <input type="hidden" name="zfbprice"  value="368" />
+                <input name="price" value="368" readonly> 元 <span id="zfbyh"></span>
+            </div>
+        </div>
+        <div class="bdbox"  >
+            <label class="bdxx"><em>*</em>付款方式</label>
+            <div class="dxbox">
+                <input type="radio" checked="checked" name="pay" id="b1" value="cod" onclick="return changeItem(0);"><label for="b1"><img src="img/hdfk.gif"></label><br>
+                
+                
+       
+            </div>
+        </div>
+
+        <div class="bdbox">
+            <label class="bdxx">留言</label>
+            <div class="text2box">
+                <textarea name="guest" placeholder=""></textarea>
+            </div>
+        </div>
+          
+<script>getfrom();</script>
+        <div class="subbox">
+            <input type="submit" name="submit" value="立即提交订单">
+        </div>
+        </form>
+        <div style="clear:both;"></div>
+    </div>
+</div>
+<script>
+var quotes=new Array("恒源祥蚕丝被 5斤被1床","恒源祥蚕丝被 8斤被1床","恒源祥蚕丝被 8斤子母被1床【3斤子被 5斤母被】","恒源祥蚕丝被 5斤被2床","恒源祥蚕丝被 10斤子母被1床【4斤子被 6斤母被】","恒源祥蚕丝被 8斤被2床");
+</script>
+<div id="fahuo"></div>
+<script type="text/javascript" src="js/fahuo.js"></script>
+<script type="text/javascript" src="js/not3.js"></script>
+
+</body></html>
